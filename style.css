@@ -1,0 +1,246 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(135, 206, 250, 0.37);
+
+}
+
+.login_parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 75%;
+    width: 70%;
+    border-radius: 8px;
+    background: url(extra/1.jpg)  center/ cover ;
+    box-shadow: 6px 6px 6px #00000085;
+}
+
+#please{
+    position: absolute;
+    text-transform: capitalize;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.login_parent h2{
+    text-transform: capitalize;
+}
+
+.login_parent input{
+    background-color: #00000000;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+    padding: 2px;
+    font-size: large;
+    text-indent: 10px;
+    animation: shake .5s infinite ease-in 3s;
+    width: 200px;
+}
+
+@keyframes shake{
+    from{translate: 5px;}
+    to{translate: -5px;}
+}
+
+.login_parent form{
+    opacity: 0;
+    animation: trans 3s forwards 1s;
+}
+
+@keyframes trans{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+button{
+    border: none;
+    background-color: rgba(245, 245, 220, 0);
+    cursor: pointer;
+    font-size: x-large;
+    text-shadow: -1px 7px 5px #000;
+    text-transform: lowercase;
+}
+
+button:hover{
+    scale: 1.1;
+    animation: border_button 2s infinite ease-in-out;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@keyframes border_button{
+    25%{border-right:solid 1px #000 ; border-top: solid 1px #000 ;}
+    50%{border-left:solid 1px #000 ; border-bottom: solid 1px #000 ;}
+    
+}
+
+.logout_parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: url(extra/space.jpg);
+}
+
+.span_family span{
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 5px;
+    height: 5px;
+    opacity: .6;
+    animation: span_light 1s infinite
+}
+
+@keyframes span_light{
+    form{filter: brightness(0);}
+    to{filter: brightness(0);}
+}
+
+.span_family span:nth-child(1){
+    right: 150px;
+    bottom: 150px;
+
+}
+.span_family span:nth-child(2){
+    left: 90px;
+    bottom: 300px;
+}
+.span_family span:nth-child(3){
+    left: 50px;
+    bottom: 200px;
+}
+.span_family span:nth-child(4){
+    top: 300px;
+}
+.span_family span:nth-child(5){
+    top: 80px;
+    left: 600px;
+}
+.span_family span:nth-child(6){
+    bottom: 820px;
+}
+.span_family span:nth-child(7){
+    right: 190px;
+    bottom: 100px;
+}
+.span_family span:nth-child(8){
+    right: 480px;
+    bottom: 564px;
+}
+.span_family span:nth-child(9){
+    top: 30px;
+    right: 200px;
+}
+.span_family span:nth-child(10){
+    bottom: 500px;
+}
+
+.logout_parent h1{
+    font-size:50px;
+    color: #fff;
+}
+
+.logout_parent button{
+    color: #fff;
+}
+
+.logout_ta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+}
+
+#logout_ta_img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 5px #000);
+    transform: translate(-400%);
+    animation: mov1 5s infinite linear 2s;
+    z-index: 3;
+}
+
+@keyframes mov1{
+    form{transform: translate(0%);}
+    to{transform: translate(650%);}
+}
+
+
+.sun{
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(1px -1px 15px rgb(255, 115, 0));
+    position: relative;
+    left: 100px;
+    z-index: 2;
+    animation: fire 10s infinite linear ;
+}
+
+@keyframes fire{
+    from{filter: drop-shadow(1px -1px 15px rgb(255, 115, 0)); transform: rotate(0);}
+    to{filter: drop-shadow(1px -1px 25px rgb(255, 72, 0)); transform:rotate(360deg);}
+}
+
+.sun:hover{
+    scale: 1.1;
+    filter: brightness(1.3);
+}
+
+.planet_shdow_parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    position: fixed;
+    z-index: 1;
+}
+
+#planet_shdow{  
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 5px #000);
+    filter: opacity(.7);
+    transform: translate(400%);
+    animation: mov2 5s infinite linear 2s;
+}
+
+@keyframes mov2{
+    form{transform: translate(0%);}
+    to{transform: translate(-650%);}
+}
+
+#logout_ta_img:hover{
+    scale: 1.2;
+    filter: brightness(2) drop-shadow(1px -1px 15px #5f5f5f81) ;
+}
+
+@media (min-width:300px) and (max-width:600px) {
+    .logout_ta{
+        height: 20%;
+    }
+
+}
